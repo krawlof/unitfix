@@ -1,0 +1,1 @@
+A może jest?
