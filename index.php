@@ -45,8 +45,10 @@
 								if(msg != 'ok')
 									$("#error").css('visibility','visible');
 								else
+								{
 									$("#error").css('visibility','hidden');
 									loging();
+								}
 							},
 							error: function()
 							{
