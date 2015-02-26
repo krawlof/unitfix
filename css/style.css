@@ -1,0 +1,149 @@
+@font-face 
+{
+	font-family: open-sans;
+	src: url(../fonts/OpenSans.ttf);
+}
+
+@font-face 
+{
+	font-family: oswald;
+	src: url(../fonts/Oswald.ttf);
+}
+
+::-webkit-input-placeholder {
+   color: #fff;
+   font-family: open-sans;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+   font-family: open-sans;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+   font-family: open-sans;
+}
+
+:-ms-input-placeholder {  
+   color: #fff;  
+   font-family: open-sans;
+}
+
+html,body
+{
+	color: #FFF;
+	background-color: #282828;
+	margin:0px;
+	padding:0px;
+	font-family: open-sans;
+}
+div
+{
+	display: block;
+}
+#error
+{
+	width:350px;
+	margin: auto;
+	color: #db3f29;
+	visibility:hidden;
+}
+#komunikat_login
+{
+	width: 290px;
+	color: #fff;
+	background-color: #D1E751;
+	padding: 5px 0px 5px 10px;
+	border-radius: 5px;
+	position: absolute;
+	left: calc(50% - 175px);
+	top: 50%;
+	display:none;
+}
+.form-login
+{
+	width:350px;
+	margin: auto;
+	color: #fff;
+	margin-top: 20%;
+}
+.form-login ul
+{
+	list-style:none;
+	position:relative;
+	margin:0px;
+	padding:0px;
+}
+ul li
+{
+	padding-bottom: 15px;
+	position: relative;
+	margin-right:100px;
+}
+
+.form__content__input-addon {
+    float: right;
+}
+
+.form__content__input 
+{
+    line-height: 1.7;
+	width: calc(100% - 35px);
+	height: 28px;
+	border: 0;
+	outline: 0;
+	border-radius: 5px 0px 0px 5px;
+	padding-left: 5px;
+	background-color: #857a82;
+	color:#fff;
+}
+.form__content__input-addon {
+    width: 30px;
+	height: 30px;
+	line-height: 1.7;
+	background-color: #857a82;
+	border-radius: 0px 5px 5px 0px;
+}
+.fa
+{
+	margin-left: 7px;
+}
+
+.tytul
+{
+	padding-bottom: 5px;
+	font-family: oswald;
+	color: #857a82;
+}
+
+.right_button
+{
+	position:absolute;
+	right:0px;
+}
+
+.form__content__submit {
+    width: 2.3rem;
+	height:75px;
+    line-height: 75px;
+    color: #fff;
+    background: #f4462e;
+	border:0;
+    border-radius: 5px;
+    cursor: pointer;
+	position:absolute;
+	right: 50px;
+	top: 27px;
+}
+.form__content__submit, i {
+	margin:auto;
+}
+.form__content__submit:hover,
+.form__content__submit:focus {
+    background: #db3f29;
+}
+.fa2
+{
+	margin-left: 12px;
+}
