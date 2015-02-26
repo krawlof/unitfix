@@ -1,4 +1,4 @@
-SPRINT 1 CZAS ROZPOCZĘCIA: 24.02.2015r. CZAS ZAKONCZENIA: 01.03.2015r.
+SPRINT 1 CZAS ROZPOCZĘCIA: 24.02.2015r. CZAS ZAKONCZENIA: 02.03.2015r.
 
 Logowanie
 - co potrzebujemy:
@@ -30,3 +30,4 @@ Pliki  i foldery:
 	|->js *p
 	|->index.php *p
 	|->login.php *s
+	|->logout.php *s
