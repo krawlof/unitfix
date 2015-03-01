@@ -39,6 +39,7 @@ Loginy i hasła:
 		host: mysql.hostinger.pl
 		hasło: znasz - jak nie to pisz :D
 	FTP:
+		host: ftp.unitfix.esy.es
 		login: u132993786.stachu
 		hasło: znasz
 		login: u132993786.patryk
