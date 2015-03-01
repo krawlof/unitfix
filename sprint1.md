@@ -31,3 +31,14 @@ Pliki  i foldery:
 	|->index.php *p
 	|->login.php *s
 	|->logout.php *s
+	
+Loginy i hasła:
+	Baza danych
+		nazwa bazy: u132993786_unitf
+		użytkownik: u132993786_root
+		host: mysql.hostinger.pl
+		hasło: znasz - jak nie to pisz :D
+	FTP:
+		login: u132993786.stachu
+		hasło: znasz
+		login: u132993786.patryk
