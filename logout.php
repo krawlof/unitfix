@@ -7,7 +7,7 @@ if(isset($_SESSION['login'])&&isset($_SESSION['id']))
 	unset($_SESSION['login']);
 	unset($_SESSION['id']);
 	unset($_SESSION['IDS']);
-	setcookie('ID','',0);
+	setcookie('IDS','',0);
 	session_destroy();
 	exit();
 }
