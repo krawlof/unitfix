@@ -1,11 +1,17 @@
 <?php
+/*
+	TABLICA ZMIENNYCH SESJI:
+	$_SESSION['login']		-> zmienna  przechowywuj¹ca login u¿ytkowniaka
+	$_SESSION['haslo']		-> zmienna przechowywuj¹ca haslo u¿ytkownika (zakodowane md5)
+	$_SESSION['IDS'] 		-> zmienna przechowywuj¹ca identyfikator sesji (zakodowany md5)
+*/
 require_once('connect.php');
 connect();
 session_start();
 ob_start();
 
 session_regenerate_id();
-$_SESSION['ID'] = md5(session_id());
+$_SESSION['IDS'] = md5(session_id());
 
 if(isset($_POST['login']))
 {
@@ -22,7 +28,7 @@ if(isset($_POST['login']))
 			$_SESSION['login']=$row[1];
 			$_SESSION['id']=$row[0];
 			
-			setcookie('ID',$_SESSION['ID'],Time()+(8*3600));
+			setcookie('IDS',$_SESSION['IDS'],Time()+5);
 			exit();
 		}
 		else
