@@ -2,9 +2,9 @@
 function connect()
 {
 
-	$server="mysql.hostinger.pl";
-	$username="u132993786_root";
-	$password="Ek2JMj1EvJ";
+	$server="localhost";
+	$username="root";
+	$password="";
 	$database="u132993786_unitf";
 	
 	$conn=mysqli_connect($server, $username, $password,$database); 

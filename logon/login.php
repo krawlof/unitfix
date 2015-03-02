@@ -11,7 +11,6 @@ session_start();
 ob_start();
 
 session_regenerate_id();
-//$_SESSION['IDS'] = md5(session_id());
 
 if(isset($_POST['login']))
 {
@@ -20,7 +19,7 @@ if(isset($_POST['login']))
 	if($login&&$haslo)
 	{
 		$query="SELECT * FROM uzytkownicy WHERE (login ='$login' AND haslo='$haslo')";
-		$result= mysqli_query($link,$query) or die ("Zapytanie: $query <br> Mysql: ".mysqli_error());
+		$result= mysqli_query($link,$query) or die ("Zapytanie: $query <br> Mysql: ".mysqli_error($link));
 		if(@mysqli_num_rows($result)==1)
 		{
 			echo 'ok';
@@ -42,7 +41,7 @@ if(isset($_POST['login']))
 	{
 		echo 'Nie wypełniono wymaganych pól.';
 	}
-	mysqli_close();
+	mysqli_close($link);
 }
 else
 {
