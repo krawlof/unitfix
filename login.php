@@ -22,7 +22,7 @@ if(isset($_POST['login']))
 			$_SESSION['login']=$row[1];
 			$_SESSION['id']=$row[0];
 			
-			setcookie('ID',$_SESSION['ID'],Time()+5);
+			setcookie('ID',$_SESSION['ID'],Time()+(8*3600));
 			exit();
 		}
 		else
@@ -41,11 +41,5 @@ else
 {
 	echo 'B³¹d wys³ania danych.';
 }
-echo'
-<HTML>
-	<body>
-		<a href="nowa.php">dsds</a>
-	</body>
-</HTML>';
 ob_end_flush();
 ?>
