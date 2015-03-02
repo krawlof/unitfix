@@ -5,7 +5,7 @@
 	$_SESSION['haslo']		-> zmienna przechowywująca haslo użytkownika (zakodowane md5)
 	$_SESSION['IDS'] 		-> zmienna przechowywująca identyfikator sesji (zakodowany md5)
 */
-require_once('connect.php');
+require_once('../connect.php');
 $link=connect();
 session_start();
 ob_start();
@@ -29,7 +29,7 @@ if(isset($_POST['login']))
 			$_SESSION['login']=$row[1];
 			$_SESSION['id']=$row[0];
 			
-			setcookie("IDS",md5(session_id()),Time()+(8*3600));
+			setcookie("IDS",md5(session_id()),Time()+(1*3600));
 			exit();
 		}
 		else

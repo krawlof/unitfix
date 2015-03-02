@@ -28,7 +28,7 @@ if(md5(session_id()) == $_COOKIE['IDS'] )
 		if($access)
 		{
 			if($site == "logout")
-				$access_site = "../".$site.".php";
+				$access_site = $site.".php";
 			else
 				$access_site = "unitfix_".$site.".php";
 			require_once('naglowek.php');

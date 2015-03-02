@@ -12,12 +12,13 @@ if(isset($_SESSION['login']) && isset($_SESSION['id']))
 	session_destroy();*/
 	$_SESSION = array();
 	
-	if (isset($_COOKIE[session_name()])) { 
-		
-		setcookie('IDS','',Time()-3600);
+	if (isset($_COOKIE[session_name()])) 
+	{ 
 		setcookie(session_name(), '', time()-42000, '/'); 
+		setcookie ("IDS", "", time() - 3600);
+		echo "<div id='tresc'><div id='kol_lewa'><div class='okno'>ok1</div></div></div>";
 	}
-	echo "<div id='tresc'><div id='kol_lewa'><div class='okno'>ok</div></div></div>";
+
 	exit();
 	session_destroy();
 	session_commit();

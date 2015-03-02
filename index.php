@@ -36,7 +36,7 @@
 						var login = $('#user-login').val();
 						var haslo = $('#user-pass').val();
 						$.ajax({
-							url: "login.php",
+							url: "logon/login.php",
 							type: "POST",
 							data: "login="+login+"&haslo="+haslo,
 							success: function(msg)
