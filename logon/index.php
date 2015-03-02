@@ -1,6 +1,11 @@
 <?php
+session_start();
+if(md5(session_id()) == $_COOKIE['IDS']  && isset($_COOKIE['IDS']))
+{
 	if(!empty($_GET))
 	{
+		require_once('connect.php');
+		$link=connect();
 		//echo "ok </br>";
 		$site = $_GET['site'];
 		$access = false;
@@ -34,4 +39,10 @@
 	{
 		echo "no";
 	}
+}
+else
+{
+	echo'Twoja sesja wygasła!!!';
+	exit();
+}
 ?>
