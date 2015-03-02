@@ -1,12 +1,12 @@
 <?php
 /*
 	TABLICA ZMIENNYCH SESJI:
-	$_SESSION['login']		-> zmienna  przechowywuj¹ca login u¿ytkowniaka
-	$_SESSION['haslo']		-> zmienna przechowywuj¹ca haslo u¿ytkownika (zakodowane md5)
-	$_SESSION['IDS'] 		-> zmienna przechowywuj¹ca identyfikator sesji (zakodowany md5)
+	$_SESSION['login']		-> zmienna  przechowywujÄ…ca login uÅ¼ytkowniaka
+	$_SESSION['haslo']		-> zmienna przechowywujÄ…ca haslo uÅ¼ytkownika (zakodowane md5)
+	$_SESSION['IDS'] 		-> zmienna przechowywujÄ…ca identyfikator sesji (zakodowany md5)
 */
 require_once('connect.php');
-connect();
+$link=connect();
 session_start();
 ob_start();
 
@@ -20,11 +20,12 @@ if(isset($_POST['login']))
 	if($login&&$haslo)
 	{
 		$query="SELECT * FROM uzytkownicy WHERE (login ='$login' AND haslo='$haslo')";
-		$result= mysql_query($query) or die ("Zapytanie: $query <br> Mysql: ".mysql_error());
-		if(@mysql_num_rows($result)==1)
+		$result= mysqli_query($link,$query) or die ("Zapytanie: $query <br> Mysql: ".mysqli_error());
+		if(@mysqli_num_rows($result)==1)
 		{
-			$row=mysql_fetch_array($result, MYSQL_NUM);
-			mysql_free_result($result);
+			echo 'ok';
+			$row=mysqli_fetch_array($result, MYSQL_NUM);
+			mysqli_free_result($result);
 			$_SESSION['login']=$row[1];
 			$_SESSION['id']=$row[0];
 			
@@ -33,19 +34,19 @@ if(isset($_POST['login']))
 		}
 		else
 		{
-			echo 'B³¹d !!!<br />';
-			echo 'Login lub has³o s¹ nieprawid³owe.' ;
+			echo 'BÅ‚Ä…d !!!<br />';
+			echo 'Login lub hasÅ‚o sÄ… nieprawidÅ‚owe.' ;
 		}
 	}
 	else
 	{
-		echo 'Nie wype³niono wymaganych pól.';
+		echo 'Nie wypeÅ‚niono wymaganych pÃ³l.';
 	}
-	mysql_close();
+	mysqli_close();
 }
 else
 {
-	echo 'B³¹d wys³ania danych.';
+	echo 'BÅ‚Ä…d wysÅ‚ania danych.';
 }
 ob_end_flush();
 ?>
