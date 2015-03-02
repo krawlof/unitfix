@@ -29,7 +29,7 @@ if(isset($_POST['login']))
 			$_SESSION['login']=$row[1];
 			$_SESSION['id']=$row[0];
 			
-			setcookie("IDS",md5(session_id()),Time()+(1*3600));
+			setcookie("IDS",md5(session_id()),Time()+(0.5*3600));
 			exit();
 		}
 		else

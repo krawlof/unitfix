@@ -74,7 +74,7 @@
 				{
 					$( ".form-login" ).fadeOut( "slow", function() {
 						$("#komunikat_login").fadeIn( "slow").delay(800).fadeOut("slow",function(){window.location='logon/index.php?site=przeglad';});
-					 });
+					});
 				}
 			});
 		</script>

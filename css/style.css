@@ -49,17 +49,24 @@ div
 	color: #db3f29;
 	visibility:hidden;
 }
-#komunikat_login
+#komunikat_login, #komunikat_sesja
 {
 	width: 290px;
 	color: #fff;
-	background-color: #D1E751;
 	padding: 5px 0px 5px 10px;
 	border-radius: 5px;
 	position: absolute;
 	left: calc(50% - 175px);
 	top: 50%;
+}
+#komunikat_login
+{
+	background-color: #D1E751;
 	display:none;
+}
+#komunikat_sesja
+{
+	background-color: #f4462e;
 }
 .form-login
 {

@@ -43,3 +43,6 @@ Loginy i hasła:
 		login: u132993786.stachu
 		hasło: znasz
 		login: u132993786.patryk
+		
+		
+Sprint zakończony 02.03.2015r 18:57
