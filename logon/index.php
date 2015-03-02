@@ -1,10 +1,15 @@
 <?php
 session_start();
-if(md5(session_id()) == $_COOKIE['IDS']  && isset($_COOKIE['IDS']))
+if(!isset($_COOKIE['IDS']))
+{
+	echo'Twoja sesja wygasła!!!';
+	exit();
+}
+if(md5(session_id()) == $_COOKIE['IDS'] )
 {
 	if(!empty($_GET))
 	{
-		require_once('connect.php');
+		require_once('../connect.php');
 		$link=connect();
 		//echo "ok </br>";
 		$site = $_GET['site'];
@@ -23,7 +28,7 @@ if(md5(session_id()) == $_COOKIE['IDS']  && isset($_COOKIE['IDS']))
 		if($access)
 		{
 			if($site == "logout")
-				$access_site = $site.".php";
+				$access_site = "../".$site.".php";
 			else
 				$access_site = "unitfix_".$site.".php";
 			require_once('naglowek.php');

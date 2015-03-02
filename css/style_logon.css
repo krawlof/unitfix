@@ -1,0 +1,220 @@
+@font-face 
+{
+	font-family: open-sans;
+	src: url(../fonts/OpenSans.ttf);
+}
+
+@font-face 
+{
+	font-family: oswald;
+	src: url(../fonts/Oswald.ttf);
+}
+
+@font-face 
+{
+	font-family: open-sans2;
+	src: url(../fonts/OpenSans-CondLight.ttf);
+}
+
+html,body
+{
+	margin:0px;
+	padding:0px;
+	background-image: url(../img/small_steps.png); /* Background pattern from subtlepatterns.com */
+	font-family: open-sans2;
+}
+#belka
+{
+	background-color: #282828;
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	left:0px;
+	top:0px;
+	right:0px;
+	z-index: 999;
+}
+#nazwa
+{
+	width: 200px;
+	height: 100%;
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	font-family: oswald;
+	float:left;
+}
+#menu_belka ul, #menu_belka li
+{
+	list-style: none;
+	margin:0px;
+	padding:0px;
+	float:left;
+}
+
+#menu_belka li
+{
+	display: inline;
+	margin: 0px 15px;
+	
+}
+#menu_belka a:link, #menu_belka a:visited
+{
+	line-height: 40px;
+	color:#fff;
+	text-decoration: none;
+}
+#menu_belka a:hover
+{
+	color: #aaa;
+}
+
+#menu_block
+{
+	background-color: #282828;
+	width: 200px;
+	position: fixed;
+	left:0px;
+	top:40px;
+	bottom:0px;
+	z-index: 999;
+}
+#user_info
+{
+	width: 100%;
+	height: 80px;
+	background-color:#3c3c3c;
+	font-family: oswald;
+}
+
+#avatar
+{
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+#avatar img
+{
+	margin: 5px 5px;
+	border-radius:50%;
+}
+
+#menu_user_info
+{
+	width: 60%;
+	height: 100%;
+	float:left;
+}
+#menu_user_info ul, #menu_user_info li
+{
+	list-style:none;
+	margin:0px;
+	padding: 0px;
+}
+#menu_user_info li
+{
+	font-size: 11px;
+}
+
+#menu_user_info a:link, #menu_user_info a:visited
+{
+	color:#fff;
+	text-decoration: none;
+}
+#menu_user_info a:hover
+{
+	color:#aaa;
+}
+#menu_user_info ul
+{
+	padding-top: 30px;
+	padding-left: 5px;
+}
+.red
+{
+	color: #db3f29;!important
+}
+#menu
+{
+	margin:0px;
+	padding:0px;
+}
+#menu li
+{
+	list-style: none;
+	margin:0px;
+	padding:0px;
+	width: 100%;
+}
+#menu a:link, #menu a:visited
+{
+	color: #fff;
+	text-decoration: none;
+	width: 100%;
+	padding: 5px 0px;
+	display: block;
+}
+#menu a:hover
+{
+	color: #aaa;
+}
+#menu i
+{
+	margin: 0px 5px 0px 25px;
+}
+#tresc
+{
+	position:absolute;
+	left:200px;
+	top:40px;
+	right: 0px;
+	bottom:0px;
+}
+.okno
+{
+	min-width: 360px;
+	min-height: 60px;
+	background-color: #fff;
+	margin: 20px 0px 0px 20px;
+	border: 1px solid #d0d0d0;
+	display: table;
+}
+.naglowek
+{
+	width: 100%;
+	height: 30px;
+	background-color: #e6e6e6;
+	border-bottom:1px solid #d0d0d0;
+	color: #555;
+}
+.tytul
+{
+	height:100%;
+	line-height: 30px;
+	margin: 0px 10px;
+	float: left;
+}
+.zwin, .rozwin
+{
+	float: right;
+	line-height:30px;
+	margin: 0px 10px 0px 0px;
+	cursor: pointer;
+}
+.tresc
+{
+	padding: 5px;
+	color: #555;
+}
+#kol_lewa
+{
+	float: left;
+	max-width: 50%;
+}
+#kol_prawa
+{
+	float: left;
+	max-width: 50%;
+}
+
+

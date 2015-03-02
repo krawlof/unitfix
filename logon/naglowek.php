@@ -35,5 +35,6 @@
 				<li><a href="#"><i class="fa fa-cogs"></i> Element menu 1</a></li>
 				<li><a href="#"><i class="fa fa-cogs"></i> Element menu 2</a></li>
 				<li><a href="#"><i class="fa fa-cogs"></i> Element menu 3</a></li>
+				<li><a href="index.php?site=logout"><i class="fa fa-cogs"></i> Wyloguj</a></li>
 			</ul>
 		</div>

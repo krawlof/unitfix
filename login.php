@@ -11,7 +11,7 @@ session_start();
 ob_start();
 
 session_regenerate_id();
-$_SESSION['IDS'] = md5(session_id());
+//$_SESSION['IDS'] = md5(session_id());
 
 if(isset($_POST['login']))
 {
@@ -29,7 +29,7 @@ if(isset($_POST['login']))
 			$_SESSION['login']=$row[1];
 			$_SESSION['id']=$row[0];
 			
-			setcookie('IDS',$_SESSION['IDS'],Time()+5);
+			setcookie("IDS",md5(session_id()),Time()+(8*3600));
 			exit();
 		}
 		else
