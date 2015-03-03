@@ -29,6 +29,11 @@ if(isset($_POST['login']))
 			$_SESSION['id']=$row[0];
 			
 			setcookie("IDS",md5(session_id()),Time()+(0.5*3600));
+			
+			$id_logowania=$row[5];
+			$data=date('Y-m-d H:i:s');
+			$query2="UPDATE logowania SET data='$data' WHERE id='$id_logowania'";
+			mysqli_query($link,$query2)or die ("Zapytanie: $query2 <br> Mysql: ".mysqli_error($link));
 			exit();
 		}
 		else
@@ -40,12 +45,13 @@ if(isset($_POST['login']))
 	else
 	{
 		echo 'Nie wypełniono wymaganych pól.';
-	}
-	mysqli_close($link);
+	}	
 }
 else
 {
 	echo 'Błąd wysłania danych.';
 }
+
+mysqli_close($link);
 ob_end_flush();
 ?>
