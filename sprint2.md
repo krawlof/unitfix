@@ -27,6 +27,7 @@ Pliki  i foldery:
 -unitfix
 	|->logon
 			|->index.php *p
+			|->unitfix_wyswietlprac.php *p
 			|->unitfix_dodajprac.php *p
 			|->dodaj_prac.php *s
 			|->unitfix_edytuj.php *p

@@ -18,7 +18,7 @@ if(md5(session_id()) == $_COOKIE['IDS'] )
 		//domyślnie będzie wyświetlana strona o braku dostępu
 		$access_site = "brak_dostepu.html";
 		//lista dostępnych stron, dokładna nazwa pliku ze stroną to unitfix_..._.php - gdzie w miejscu ... wstawiasz wrtość z tablicy
-		$available_site = array("przeglad","logout");
+		$available_site = array("przeglad","logout","edytuj","dodajprac","wyswietlprac");
 		
 		foreach ($available_site as $iter)
 		{

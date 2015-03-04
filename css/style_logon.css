@@ -216,5 +216,61 @@ html,body
 	float: left;
 	max-width: 50%;
 }
+/* formularz */
+.formularz
+{
+	background-color: #FFF;
+	border: 1px solid #d0d0d0;
+	padding: 10px;
+	margin: 20px auto;
+	width: 300px;
+}
+.input 
+{
+    line-height: 1.7;
+	height: 28px;
+	border: 0;
+	outline: 0;
+	border-radius: 5px;
+	padding-left: 5px;
+	background-color: #eee;
+	color:#ddd;
+}
+.submit {
+    width: 4.3rem;
+	height:35px;
+    line-height: 35px;
+    color: #fff;
+    background: #f4462e;
+	border:0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit:hover,
+.submit:focus {
+    background: #db3f29;
+}
+#tabela
+{
+	margin: 20px;
+	background-color: #FFF;
+	min-width: 400px;
+	border: 0px;
+	border-collapse: collapse;
+	padding: 10px;
+}
+#tabela tr:first-child 
+{
+	background-color: #888;
+	color: #FFF;
+}
+#tabela tr:nth-child(2n)
+{
+	background-color: #eee;
+}
+#tabela td
+{
+	padding: 2px 5px;
+}
 
 
