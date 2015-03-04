@@ -18,7 +18,7 @@ if(isset($_SESSION['login']) && isset($_SESSION['id']))
 		setcookie ("IDS", "", time() - 3600);
 		echo "<div id='tresc'><div id='kol_lewa'><div class='okno'>ok1</div></div></div>";
 	}
-	header('Location: /unitfix/unitfix/index.php');
+	header('Location:/unitfix/unitfix/index.php');
 	exit();
 	session_destroy();
 	session_commit();
