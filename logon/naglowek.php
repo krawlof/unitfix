@@ -12,9 +12,10 @@
 			<div id="nazwa">UnitFix</div>
 			<div id="menu_belka">
 				<ul>
-					<li><a href="#"><i class="fa fa-cogs"></i> Element menu 1</a></li>
-					<li><a href="#"><i class="fa fa-cogs"></i> Element menu 2</a></li>
-					<li><a href="#"><i class="fa fa-cogs"></i> Element menu 3</a></li>
+					<?php
+						if($_GET['site'] == 'wyswietlprac')
+							require_once('belka_menu_'.$_GET['site'] .'.php');
+					?>
 				</ul>
 			</div>
 		</div>

@@ -96,7 +96,7 @@ ul li
 .form__content__input 
 {
     line-height: 1.7;
-	width: calc(100% - 35px);
+	width: calc(100% - 36px);
 	height: 28px;
 	border: 0;
 	outline: 0;

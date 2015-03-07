@@ -15,6 +15,11 @@
 		while ($row = mysqli_fetch_array($result,MYSQL_ASSOC))
 		{
 			echo "<tr>";
+			if(isset($_SEESION['rola']))
+			{
+				if($_SEESION['rola'] == 'admin')
+					echo '<td><a href="index.php?site=dodajprac"><i class="fa fa-user-plus"></i>Dodaj pracownika</a></td>';
+			}
 			echo "<td>".$row['imie']."</td>";
 			echo "<td>".$row['nazwisko']."</td>";
 			echo "<td>".$row['data-urodzenia']."</td>";
