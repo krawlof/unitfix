@@ -27,6 +27,7 @@ if(isset($_POST['login']))
 			mysqli_free_result($result);
 			$_SESSION['login']=$row[1];
 			$_SESSION['id']=$row[0];
+			$_SESSION['rola']=$row[7];
 			
 			setcookie("IDS",md5(session_id()),Time()+(0.5*3600));
 			
