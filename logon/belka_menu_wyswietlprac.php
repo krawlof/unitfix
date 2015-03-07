@@ -1,8 +1,8 @@
 <?php
-	if(isset($_SEESION['rola']))
+	if(isset($_SESSION['rola']))
 	{
-		if($_SEESION['rola'] == 'admin')
-			echo '<li><a href="index.php?site=dodajprac"><i class="fa fa-cogs"></i>Dodaj pracownika</a></li>';
+		if($_SESSION['rola'] == 'admin')
+			echo '<li><a href="index.php?site=dodajprac"><i class="fa fa-user-plus"></i>Dodaj pracownika</a></li>';
 		else
 			echo '<li><a href="index.php?site=edytuj"><i class="fa fa-cogs"></i>Edytuj konto</a></li>';
 	}

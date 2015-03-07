@@ -1,6 +1,13 @@
 <div id="tresc">
 	<table id="tabela">
 		<tr>
+		<?php
+			if(isset($_SESSION['rola']))
+			{
+				if($_SESSION['rola'] == 'admin')
+					echo '<td>Edytuj</td>';
+			}
+		?>
 			<td>Imię</td>
 			<td>Nazwisko</td>
 			<td>Data Urodzenia</td>
@@ -15,10 +22,10 @@
 		while ($row = mysqli_fetch_array($result,MYSQL_ASSOC))
 		{
 			echo "<tr>";
-			if(isset($_SEESION['rola']))
+			if(isset($_SESSION['rola']))
 			{
-				if($_SEESION['rola'] == 'admin')
-					echo '<td><a href="index.php?site=dodajprac"><i class="fa fa-user-plus"></i>Dodaj pracownika</a></td>';
+				if($_SESSION['rola'] == 'admin')
+					echo '<td><a href="index.php?site=edytuj&id='.$row['id'].'"><i class="fa fa-cogs"></i></a></td>';
 			}
 			echo "<td>".$row['imie']."</td>";
 			echo "<td>".$row['nazwisko']."</td>";

@@ -1,6 +1,6 @@
 <div id="tresc">
 	<div class="formularz">
-		<h1>Dodaj klienta</h1>
+		<h1>Dodaj pracownika</h1>
 		<form id="form">
 		<table>
 			<tr><td>Imię</td><td><input type="text" class="input" id="imie"/></td></tr>
@@ -19,8 +19,8 @@
 			jQuery(document).ready(function() 
 			{
 				$(".submit").click(function() {
-					if(valid())
-					{
+					//if(valid())
+					//{
 						var imie = $('imie').val();
 						var nazwisko = $('nazwisko').val();
 						var data_ur = $('data_ur').val();
@@ -45,29 +45,16 @@
 							},
 							error: function()
 							{
-								$("#error").html("<p>Nie mogę zalogować!</br>Spróbuj później, lub skontaktuj się z administratorem<p>");
-								$("#error").css('visibility','visible');
+								/*$("#error").html("<p>Nie mogę zalogować!</br>Spróbuj później, lub skontaktuj się z administratorem<p>");
+								$("#error").css('visibility','visible');*/
 							}
 						});
-					}
-					else
+					//}
+					/*else
 					{
 						$("#error").html("<p>Błąd! Nie wypełniono wszystkich pól!</p>");
 						$("#error").css('visibility','visible');
-					}
+					}*/
 				});
-				function valid()
-				{
-					if($('#user-login').val() && $('#user-pass').val())
-						return true;
-					else
-						return false;
-				}
-				function loging()
-				{
-					$( ".form-login" ).fadeOut( "slow", function() {
-						$("#komunikat_login").fadeIn( "slow").delay(800).fadeOut("slow",function(){window.location='logon/index.php?site=przeglad';});
-					});
-				}
 			});
 	</script>

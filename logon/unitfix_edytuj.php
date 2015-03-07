@@ -1,16 +1,37 @@
 <div id="tresc">
 	<div class="formularz">
-		<h1>Edytuj klienta</h1>
+		<h1>Edytuj pracownika</h1>
 		<form id="form">
 		<table>
-			<tr><td>Imię</td><td><input type="text" class="input" id="imie"/></td></tr>
-			<tr><td>Nazwisko</td><td><input type="text" class="input" id="nazwisko"/></td></tr>
-			<tr><td>Data urodzenia</td><td><input type="text" class="input" id="data_ur" /></td></tr>
-			<tr><td>Data zatrudnienia</td><td><input type="text" class="input" id="data_zat" /></td></tr>
-			<tr><td>Kod pocztowy</td><td><input type="text" class="input" id="kod"/></td></tr>
-			<tr><td>Miejscowość</td><td><input type="text" class="input" id="miej"/></td></tr>
-			<tr><td>Ulica</td><td><input type="text" class="input" id="ulica"/></td></tr>
-			<tr><td><button class="submit" >Dodaj!</button></td></tr>
+			<?php
+				if(isset($_SESSION['rola']))
+				{
+					if($_SESSION['rola'] == 'admin')
+					{
+						$id = $_GET['id'];
+						$query="SELECT * FROM pracownicy JOIN uzytkownicy ON pracownicy.id = uzytkownicy.pracownicy_id WHERE pracownicy.id = '".$id."'" ;
+						$result=mysqli_query($link,$query) or trigger_error ("Zapytanie: $query\n<br /> Błąd MySQL: " .mysql_error());
+						while ($row = mysqli_fetch_array($result,MYSQL_ASSOC))
+						{
+							echo '<tr><td>Login</td><td><input type="text" class="input" id="imie" value="'.$row['login'].'"/></td></tr>';
+							//echo '<tr><td>Nazwisko</td><td><input type="text" class="input" id="nazwisko" /></td></tr>';
+							echo '<tr><td>Imię</td><td><input type="text" class="input" id="imie" value="'.$row['imie'].'"/></td></tr>';
+							echo '<tr><td>Nazwisko</td><td><input type="text" class="input" id="nazwisko" value="'.$row['nazwisko'].'"/></td></tr>';
+							echo '<tr><td>Data urodzenia</td><td><input type="text" class="input" id="data_ur" value="'.$row['data-urodzenia'].'"/></td></tr>';
+							echo '<tr><td>Data zatrudnienia</td><td><input type="text" class="input" id="data_zat" value="'.$row['data-zatrudnienia'].'"/></td></tr>';
+							echo '<tr><td>Kod pocztowy</td><td><input type="text" class="input" id="kod" value="'.$row['kod-pocztowy'].'"/></td></tr>';
+							echo '<tr><td>Miejscowość</td><td><input type="text" class="input" id="miej" value="'.$row['miejscowosc'].'"/></td></tr>';
+							echo '<tr><td>Ulica</td><td><input type="text" class="input" id="ulica" value="'.$row['ulica'].'"/></td></tr>';
+							echo '<tr><td><button class="submit" >Dodaj!</button></td></tr>';
+						}
+					}
+					else
+					{
+							echo '<tr><td>hasło</td><td><input type="password" class="input" id="password"/></td></tr>';
+							echo '<tr><td><button class="submit" >Dodaj!</button></td></tr>';
+					}
+				}
+			?>
 		</table>
 		</form>
 	</div>
@@ -62,12 +83,6 @@
 						return true;
 					else
 						return false;
-				}
-				function loging()
-				{
-					$( ".form-login" ).fadeOut( "slow", function() {
-						$("#komunikat_login").fadeIn( "slow").delay(800).fadeOut("slow",function(){window.location='logon/index.php?site=przeglad';});
-					});
 				}
 			});
 	</script>
