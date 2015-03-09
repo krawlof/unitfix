@@ -10,9 +10,13 @@
 			<tr><td>Kod pocztowy</td><td><input type="text" class="input" id="kod"/></td></tr>
 			<tr><td>Miejscowość</td><td><input type="text" class="input" id="miej"/></td></tr>
 			<tr><td>Ulica</td><td><input type="text" class="input" id="ulica"/></td></tr>
-			<tr><td><button class="submit" >Dodaj!</button></td></tr>
+			<tr><td>Login</td><td><input type="text" class="input" id="login"/></td></tr>
+			<tr><td><span class="submit" >Dodaj!</span></td></tr>
 		</table>
 		</form>
+		<div id="error">
+			<p>Dodano nowego pracownika</p>
+		</div>
 	</div>
 </div>
 <script>
@@ -21,17 +25,18 @@
 				$(".submit").click(function() {
 					//if(valid())
 					//{
-						var imie = $('imie').val();
-						var nazwisko = $('nazwisko').val();
-						var data_ur = $('data_ur').val();
-						var data_zat = $('data_zat').val();
-						var kod = $('kod').val();
-						var miej = $('miej').val();
-						var ulica = $('ulica').val();
+						var imie = $('#imie').val();
+						var nazwisko = $('#nazwisko').val();
+						var data_ur = $('#data_ur').val();
+						var data_zat = $('#data_zat').val();
+						var kod = $('#kod').val();
+						var miej = $('#miej').val();
+						var ulica = $('#ulica').val();
+						var login = $('#login').val();
 						$.ajax({
-							url: "dodaj_prac.php",
+							url: "dodajprac.php",
 							type: "POST",
-							data: "imie="+imie+"&nazwisko="+nazwisko+"&data_ur="+data_ur+"&data_zat="+data_zat+"&kod="+kod+"&miej="+miej+"&ulica="+ulica,
+							data: "imie="+imie+"&nazwisko="+nazwisko+"&data_ur="+data_ur+"&data_zat="+data_zat+"&kod="+kod+"&miej="+miej+"&ulica="+ulica+"&login="+login,
 							success: function(msg)
 							{
 								$("#error").html(msg);
@@ -40,13 +45,12 @@
 								else
 								{
 									$("#error").css('visibility','hidden');
-									loging();
 								}
 							},
 							error: function()
 							{
-								/*$("#error").html("<p>Nie mogę zalogować!</br>Spróbuj później, lub skontaktuj się z administratorem<p>");
-								$("#error").css('visibility','visible');*/
+								$("#error").html("<p>Błąd dodawaniu użytkownika!<p>");
+								$("#error").css('visibility','visible');
 							}
 						});
 					//}

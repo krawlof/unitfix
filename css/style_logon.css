@@ -237,14 +237,13 @@ html,body
 	color:#888;
 }
 .submit {
-    width: 4.3rem;
-	height:35px;
     line-height: 35px;
     color: #fff;
     background: #f4462e;
 	border:0;
     border-radius: 5px;
     cursor: pointer;
+	padding: 5px 10px;
 }
 .submit:hover,
 .submit:focus {
@@ -272,6 +271,13 @@ html,body
 #tabela td
 {
 	padding: 2px 5px;
+}
+#error
+{
+	width:350px;
+	margin: auto;
+	color: #db3f29;
+	visibility:hidden;
 }
 
 

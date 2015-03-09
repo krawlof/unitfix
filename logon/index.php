@@ -43,7 +43,8 @@ if(md5(session_id()) == $_COOKIE['IDS'] )
 	}
 	else
 	{
-		echo "no";
+		require_once('../sesja_wygasla.html');
+		exit();
 	}
 }
 else

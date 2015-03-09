@@ -18,7 +18,7 @@ ob_start();
 	$dodal=$_SESSION['login'];
 
 	$query1="INSERT	INTO pracownicy (imie, nazwisko, data-urodzenia, data-zatrudnienia, kod-pocztowy, miejscowosc, ulica) 
-									VALUES ('$imie', '$nazwisko', '$data_ur', '$data_zat', '$kod', '$miej', '$ulica')"; // DODAWANIE WPISU DO TABELI  PRACOWNICY
+									VALUES ('$imie', '$nazwisko', '$data_urodzenia', '$data_zatrudnienia', '$kod_pocztowy', '$miejscowosc', '$ulica')"; // DODAWANIE WPISU DO TABELI  PRACOWNICY
 	mysqli_query($link,$query1) or die ("Zapytanie: $query1 <br> Mysql: ".mysqli_error($link));
 	$prac_id=mysqli_insert_id($link); //pobera id osttniego dadanego rekordu do bazy danych
 
